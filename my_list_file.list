@@ -1,0 +1,1 @@
+deb [signed-by=/etc/apt/trusted.gpg.d/dopaemon.gpg] https://dopaemon.github.io/PPA ./

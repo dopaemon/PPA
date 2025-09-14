@@ -1,0 +1,14 @@
+Package: hello-deb
+Version: 1.0.0
+Architecture: amd64
+Maintainer: John Unland <junland@github.com>
+Installed-Size: 1215
+Filename: ./debs/hello-deb_1.0.0_amd64.deb
+Size: 502692
+MD5sum: eb8652193a8f56e9800fcfd262741bad
+SHA1: 35cfc62691a2033cf65c550b4ec19974090f0fd9
+SHA256: ac1c77122e62103665b21f8cd49bbf09e24f2d8e8809c71e1dba06db4348d46d
+Section: main
+Priority: optional
+Description: Example Go application
+
