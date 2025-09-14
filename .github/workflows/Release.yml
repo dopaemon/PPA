@@ -1,8 +1,6 @@
 name: Release
 
 on:
-  schedule:
-    - cron: '0 0 1 * *'
   workflow_dispatch:
 
 jobs:
@@ -12,6 +10,55 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dpkg-dev gnupg
+
+      - name: Import GPG private key
+        run: |
+          echo "$GPG_PRIVATE_KEY" | gpg --batch --import
+          echo "GPG key list:"
+          gpg --list-secret-keys
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+
+      - name: Build Packages & Sign Release
+        run: |
+          set -e
+          set -v
+
+          export KEYNAME=${KEYNAME}
+
+          dpkg-scanpackages --multiversion . > Packages
+          bzip2 -fks Packages
+
+          apt-ftparchive release . > Release
+
+          gpg --batch --yes --pinentry-mode loopback \
+              --passphrase "$GPG_PASSPHRASE" \
+              --default-key "$KEYNAME" \
+              -abs -o Release.gpg Release
+
+          gpg --batch --yes --pinentry-mode loopback \
+              --passphrase "$GPG_PASSPHRASE" \
+              --default-key "$KEYNAME" \
+              --clearsign -o InRelease Release
+        env:
+          KEYNAME: ${{ secrets.GPG_KEYNAME }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+
+      - name: Setup Git identity
+        run: |
+          git config --global user.name "dopaemon"
+          git config --global user.email "polarisdp@gmail.com"
+
+      - name: Commit and push changes
+        uses: devops-infra/action-commit-push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: "PPA: Update PPA Package"
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
