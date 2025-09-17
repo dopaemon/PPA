@@ -12,6 +12,6 @@ sudo apt update
 ```
 
 ## List Package
-| Name    | Sự miêu tả | Source |
+| Name    | Description | Source |
 | -------- | ------- | ------- |
 | ketquaxoso  | Chương trình xem và kiểm tra kết quả xổ số việt nam | [dopaemon/KetQuaXoSo](https://github.com/dopaemon/KetQuaXoSo.git) |
