@@ -69,6 +69,11 @@ jobs:
         with:
           ref: main
 
+      - name: Clean Folder
+        run:
+          rm -rf ./.git
+          rm -rf ./.github
+
       - name: Generate Directory Listings
         uses: jayanta525/github-pages-directory-listing@v4.0.0
         with:
