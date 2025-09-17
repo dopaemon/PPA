@@ -63,6 +63,7 @@ jobs:
           commit_message: "PPA: Update PPA Package"
 
   pages-directory-listing:
+    needs: build
     runs-on: ubuntu-latest
     name: Directory Listings Index
     steps:
