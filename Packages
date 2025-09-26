@@ -1,16 +1,22 @@
-Package: hello-deb
-Version: 1.0.0
+Package: gopud
+Version: 0.0.1
 Architecture: amd64
-Maintainer: John Unland <junland@github.com>
-Installed-Size: 1215
-Filename: ./debs/hello-deb_1.0.0_amd64.deb
-Size: 502692
-MD5sum: eb8652193a8f56e9800fcfd262741bad
-SHA1: 35cfc62691a2033cf65c550b4ec19974090f0fd9
-SHA256: ac1c77122e62103665b21f8cd49bbf09e24f2d8e8809c71e1dba06db4348d46d
-Section: main
+Maintainer: dopaemon <polarisdp@gmail.com>
+Installed-Size: 22128
+Filename: ./debs/gopud_0.0.1_amd64.deb
+Size: 6614248
+MD5sum: 42a3b3f9188c3ab27973e36715bcf711
+SHA1: 1962d4f83d4ad119ec6c4d2acb8080eaaa760758
+SHA256: b775dd0d131f343af2e7d99f7252e1565ff2bc4f874fb37422e38e50f2026c5c
+Section: utils
 Priority: optional
-Description: Example Go application
+Homepage: https://github.com/dopaemon/gopud
+Description: PixelDrain upload/download tool written in Go
+ A lightweight command-line utility for uploading and downloading
+ files to and from PixelDrain. Built with Go, gopud is fast,
+ portable, and easy to integrate into shell scripts or automation
+ workflows. Suitable for users who need a simple way to handle
+ PixelDrain file transfers directly from the terminal.
 
 Package: ketquaxoso
 Version: 0.0.1
