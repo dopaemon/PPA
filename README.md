@@ -15,3 +15,4 @@ sudo apt update
 | Name    | Description | Source |
 | -------- | ------- | ------- |
 | ketquaxoso  | Chương trình xem và kiểm tra kết quả xổ số việt nam | [dopaemon/KetQuaXoSo](https://github.com/dopaemon/KetQuaXoSo.git) |
+| gopud | gopud is a lightweight command-line tool written in Go for uploading and downloading files from PixelDrain. It is designed for speed, portability, and easy integration into automation scripts. With minimal dependencies, gopud offers a simple yet reliable way to handle file transfers directly from the terminal across platforms. | [dopaemon/gopud](https://github.com/dopaemon/gopud.git) |
