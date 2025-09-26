@@ -32,7 +32,9 @@ jobs:
           export KEYNAME=${KEYNAME}
 
           dpkg-scanpackages --multiversion . > Packages
-          bzip2 -fks Packages
+          gzip -fk Packages
+          bzip2 -fk Packages
+          xz -fk Packages
 
           apt-ftparchive release . > Release
 
@@ -61,6 +63,7 @@ jobs:
           commit_message: "PPA: Update PPA Package"
 
   pages-directory-listing:
+    needs: build
     runs-on: ubuntu-latest
     name: Directory Listings Index
     steps:
