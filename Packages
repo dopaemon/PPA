@@ -1,3 +1,19 @@
+Package: fgofile
+Version: 0.0.1
+Architecture: amd64
+Maintainer: dopaemon <polarisdp@gmail.com>
+Installed-Size: 2482
+Depends: libgl1, libx11-6, libglfw3
+Filename: ./debs/fgofile_0.0.1_amd64.deb
+Size: 960372
+MD5sum: 3c6f9af0b8891d132c0866134be42a50
+SHA1: f4c01286f5a77fa5ea6414b38541fedb63290e7f
+SHA256: 53ac092c2669b5b7dd817bfdb783de348b184099b31cfd3558c1c236880695e9
+Section: utils
+Priority: optional
+Homepage: https://github.com/dopaemon/FGoFile.git
+Description: FTP Minimal Data Storage
+
 Package: gopud
 Version: 0.0.1
 Architecture: amd64
