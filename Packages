@@ -14,6 +14,22 @@ Priority: optional
 Homepage: https://github.com/dopaemon/FGoFile.git
 Description: FTP Minimal Data Storage
 
+Package: fgofile
+Version: 0.0.1ubuntu1
+Architecture: amd64
+Maintainer: dopaemon <polarisdp@gmail.com>
+Installed-Size: 2482
+Depends: libgl1, libx11-6, libglfw3
+Filename: ./debs/fgofile_0.0.1ubuntu1_amd64.deb
+Size: 960526
+MD5sum: 4155ce88944acc55c8e7b77da01f239c
+SHA1: cf17aba5aac80c0ef2e5f60a9e693c12ce1bf388
+SHA256: 219f30526cd9f5745bf2129a6fbd29bab3f57f55fe4d773268d5e5848e1dd53c
+Section: utils
+Priority: optional
+Homepage: https://github.com/dopaemon/FGoFile.git
+Description: FTP Minimal Data Storage
+
 Package: gopud
 Version: 0.0.1
 Architecture: amd64
